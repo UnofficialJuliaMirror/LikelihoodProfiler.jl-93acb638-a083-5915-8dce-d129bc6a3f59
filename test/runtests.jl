@@ -24,8 +24,11 @@ println("Starting tests for all all methods of get_right_endpoint")
 println("Starting tests for profile")
 @testset "profile" begin include("test_profile.jl") end
 
-println("Starting tests for different fitting alg")
+println("Starting tests for derivative-free fitting alg")
 @testset "local_alg" begin include("test_algorithms.jl") end
+
+println("Starting tests for gradient-based fitting alg")
+@testset "local_alg" begin include("test_grad_algs.jl") end
 
 println("Starting tests for Plot @recipe")
 @testset "PLOT_INTERVAL" begin include("test_plots.jl") end
